@@ -138,9 +138,33 @@ bool isWon(int row , int col){//  row 1  col 5
 	//check Diag1 User Story 1
 	
 	//check Diag2 User Story 2
+	int winDiag2 = 1; // include the current cell
+	int r, c;
 	
+	// Up-right (/)
+	r = row - 1;
+	c = col + 1;
+	while (r >= 0 && c < 7) {
+		if (board[r][c] == val)
+			winDiag2++;
+		else
+			break;
+		r--;
+		c++;
+	}
+	
+	// Down-left (/)
+	r = row + 1;
+	c = col - 1;
+	while (r < 7 && c >= 0) {
+		if (board[r][c] == val)
+			winDiag2++;
+		else
+			break;
+		r++;
+		c--;
+}
 
-	
 	return 0; //none of above!
 }
 /* end() is the announcer of the result
