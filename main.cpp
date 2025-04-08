@@ -161,7 +161,7 @@ bool isWon(int row , int col){//  row 1  col 5
 	}
 	
 	if(winDiag1>3) return 1;
-	
+	return 0; //none of above!
 }
 	//check Diag2 User Story 2
 
