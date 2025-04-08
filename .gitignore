@@ -1,0 +1,13 @@
+#ignore build artifacts
+*.o
+*.out
+build/
+
+#ignore os-specific files
+.DS_Store
+Thumbds.db
+
+#ignore IDE files
+.vscode/
+.idea/
+
