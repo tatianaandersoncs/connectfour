@@ -135,7 +135,7 @@ bool isWon(int row , int col){//  row 1  col 5
 
 	if(winVer>3) return 1;
 	
-	// Diagonal ↘ (top-left to bottom-right)
+	// Diagonal (top-left to bottom-right)
 	i = row;
 	int j = col;
 	while (i < 6 && j < 6 && board[i+1][j+1] == val) {
@@ -152,7 +152,7 @@ bool isWon(int row , int col){//  row 1  col 5
 	}
 	if (winDiag1 > 3) return 1;
 
-	// Diagonal ↙ (top-right to bottom-left)
+	// Diagonal (top-right to bottom-left)
 	i = row;
 	j = col;
 	while (i < 6 && j > 0 && board[i+1][j-1] == val) {

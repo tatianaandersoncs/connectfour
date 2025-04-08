@@ -10,3 +10,45 @@ Thumbs.db
 # ignore IDE-specific files
 .idea/
 vscode/
+
+# Build artifacts
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.lib
+
+# IDE specific files
+.vscode/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.user
+*.suo
+*.sdf
+*.ncb
+ipch/
+*.opensdf
+
+# Dependency manager files
+packages/
+vcpkg_installed/
+
+# CMake build files
+build/
+CMakeLists.txt.user
+cmake_install.cmake
+CMakeCache.txt
+
+# System files
+._*
+*.swp
+*~
+*.log
+
+# Qt-specific files
+*.moc
+*.qrc
+*.ui
