@@ -136,8 +136,41 @@ bool isWon(int row , int col){//  row 1  col 5
 	if(winVer>3) return 1;
 	
 	//check Diag1 User Story 1
+	i = row;
+	while(i<7){
+	   if(board[i+1][col+1] == val)
+	        winDiag1++;
+	   else
+	        break;
+	   i++;
+	}
+	i = row;
+	while(i>0){
+	   if(board[i-1][col-1] == val)
+	        winDiag1++;
+	   else
+	        break;
+	   i--;
+	}
 	
 	//check Diag2 User Story 2
+	i = row;
+	while(i<7){
+	   if(board[i+1][col-1] == val)
+	        winDiag2++;
+	   else
+	        break;
+	   i++;
+	}
+	i = row;
+	while(i>0){
+	   if(board[i-1][col+1] == val)
+	        winDiag2++;
+	   else
+	        break;
+	   i--;
+	}
+	if(winDiag1>3 || winDiag2>3) return 1;
 	
 
 	
@@ -191,8 +224,7 @@ int main(){
 		// user2's turn!
 		else{ 
 			column = user_input(2);
-			gamer(column , 2);
-		}
+			gamer(column , 2); 
 		// Checking if the new disc won the game
 		// board[0] keeps track of empty spaces in each column
 		if(isWon(board[0][column] + 1 , column)){
@@ -201,6 +233,7 @@ int main(){
 		}
 		// Setting the next turn
 		turn = (turn == 1) ? 2:1;
+	}
 	
 			
 	}
