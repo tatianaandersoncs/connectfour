@@ -136,13 +136,35 @@ bool isWon(int row , int col){//  row 1  col 5
 	if(winVer>3) return 1;
 	
 	//check Diag1 User Story 1
+	// First check up-right
+	i = row;
+	int j = col;
+	while(i > 1 && j < y-1){
+	   if(board[i-1][j+1] == val)
+	        winDiag1++;
+	   else
+	        break;
+	   i--;
+	   j++;
+	}
 	
-	//check Diag2 User Story 2
+	// Then check down-left
+	i = row;
+	j = col;
+	while(i < x-1 && j > 0){
+	   if(board[i+1][j-1] == val)
+	        winDiag1++;
+	   else
+	        break;
+	   i++;
+	   j--;
+	}
 	
-
+	if(winDiag1>3) return 1;
 	
-	return 0; //none of above!
 }
+	//check Diag2 User Story 2
+
 /* end() is the announcer of the result
 	at the the end of the game.
 	it gets a parameter c and 
