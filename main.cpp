@@ -144,6 +144,7 @@ bool isWon(int row , int col){//  row 1  col 5
 	        break;
 	   i++;
 	}
+
 	i = row;
 	while(i>0){
 	   if(board[i-1][col-1] == val)
@@ -154,23 +155,7 @@ bool isWon(int row , int col){//  row 1  col 5
 	}
 	
 	//check Diag2 User Story 2
-	i = row;
-	while(i<7){
-	   if(board[i+1][col-1] == val)
-	        winDiag2++;
-	   else
-	        break;
-	   i++;
-	}
-	i = row;
-	while(i>0){
-	   if(board[i-1][col+1] == val)
-	        winDiag2++;
-	   else
-	        break;
-	   i--;
-	}
-	if(winDiag1>3 || winDiag2>3) return 1;
+	 //
 	
 
 	
