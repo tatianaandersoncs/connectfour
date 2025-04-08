@@ -136,7 +136,30 @@ bool isWon(int row , int col){//  row 1  col 5
 	if(winVer>3) return 1;
 	
 	//check Diag1 User Story 1
-	
+	i = row;
+	int j = col;
+
+	while(i<7 && j<7){    // checks bottom
+	   if(board[i+1][j+1] == val)
+	        winDiag1++;
+	   else
+	        break;
+	   i++;
+	   j++;
+	}
+
+	i = row;
+	j = col;
+	while(i > 0 && j > 0){
+	   if(board[i - 1][j - 1] == val)
+	        winDiag1++;
+	   else
+	        break;
+	   i--;
+	   j--;
+	}
+
+	if(winDiag1>3) return 1;
 	//check Diag2 User Story 2
 	
 
